@@ -9,7 +9,7 @@ import {
 
 test("Un tournoi ne peut pas démarrer avec moins de 3 joueurs", () => {
   const tournament = createTournament({
-    name: "Tournoi trop petit",
+    name: "Too small tournament",
     minPlayers: 3,
     maxPlayers: 10
   });
@@ -25,7 +25,7 @@ test("Un tournoi ne peut pas démarrer avec moins de 3 joueurs", () => {
 
 test("Un tournoi démarre quand le nombre minimum de joueurs est atteint", () => {
   const tournament = createTournament({
-    name: "Tournoi valide",
+    name: "Valid tournament",
     minPlayers: 3,
     maxPlayers: 10
   });
@@ -41,7 +41,7 @@ test("Un tournoi démarre quand le nombre minimum de joueurs est atteint", () =>
 
 test("Aucune inscription possible après le démarrage", () => {
   const tournament = createTournament({
-    name: "Tournoi fermé",
+    name: "Closed tournament",
     minPlayers: 3,
     maxPlayers: 5
   });

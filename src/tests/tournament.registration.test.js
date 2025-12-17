@@ -9,7 +9,7 @@ import {
 
 test("Un joueur peut être ajouté à un tournoi", () => {
   const tournament = createTournament({
-    name: "Tournoi volley",
+    name: "Volleyball tournament",
     minPlayers: 3,
     maxPlayers: 4
   });
@@ -21,7 +21,7 @@ test("Un joueur peut être ajouté à un tournoi", () => {
 
 test("Impossible d'ajouter plus de joueurs que le maximum", () => {
   const tournament = createTournament({
-    name: "Tournoi limité",
+    name: "Limited tournament",
     minPlayers: 2,
     maxPlayers: 2
   });
@@ -37,7 +37,7 @@ test("Impossible d'ajouter plus de joueurs que le maximum", () => {
 
 test("Un joueur peut être retiré avant le démarrage du tournoi", () => {
   const tournament = createTournament({
-    name: "Tournoi modifiable",
+    name: "Editable tournament",
     minPlayers: 2,
     maxPlayers: 4
   });

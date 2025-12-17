@@ -12,7 +12,7 @@ test("Un tournoi doit avoir un nom", () => {
 
 test("Un tournoi a un nombre minimum et maximum de joueurs", () => {
   const tournament = createTournament({
-    name: "Tournoi été",
+    name: "Summer tournament",
     minPlayers: 3,
     maxPlayers: 16
   });
@@ -25,7 +25,7 @@ test("Le nombre minimum de joueurs ne peut pas dépasser le maximum", () => {
   assert.throws(
     () =>
       createTournament({
-        name: "Tournoi invalide",
+        name: "Invalid tournament",
         minPlayers: 10,
         maxPlayers: 5
       }),

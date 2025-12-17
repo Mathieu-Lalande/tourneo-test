@@ -10,7 +10,7 @@ import {
 
 test("Les poules sont générées au démarrage du tournoi", () => {
   const tournament = createTournament({
-    name: "Tournoi avec poules",
+    name: "Tournament with pools",
     minPlayers: 4,
     maxPlayers: 8,
     withPools: true
@@ -28,7 +28,7 @@ test("Les poules sont générées au démarrage du tournoi", () => {
 
 test("Impossible de générer les tableaux avant la fin des poules", () => {
   const tournament = createTournament({
-    name: "Tournoi bloqué",
+    name: "Blocked tournament",
     minPlayers: 4,
     maxPlayers: 8,
     withPools: true
@@ -48,7 +48,7 @@ test("Impossible de générer les tableaux avant la fin des poules", () => {
 
 test("La clôture des poules génère un tableau à élimination", () => {
   const tournament = createTournament({
-    name: "Tournoi final",
+    name: "Final tournament",
     minPlayers: 4,
     maxPlayers: 8,
     withPools: true
