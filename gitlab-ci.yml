@@ -1,0 +1,11 @@
+stages:
+- unit_tests
+- integration_tests
+
+unit-tests:
+  stage: unit_tests
+  image: node:25
+  script:
+    - npm install
+    - npm test
+    - echo "Unit tests completed."
