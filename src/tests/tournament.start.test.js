@@ -5,7 +5,7 @@ import {
   createTournament,
   addPlayer,
   startTournament
-} from "../tournament.js";
+} from "../tournament.ts";
 
 test("Un tournoi ne peut pas démarrer avec moins de 3 joueurs", () => {
   const tournament = createTournament({

@@ -5,7 +5,7 @@ import {
   createTournament,
   addPlayer,
   removePlayer
-} from "../tournament.js";
+} from "../tournament.ts";
 
 test("Un joueur peut être ajouté à un tournoi", () => {
   const tournament = createTournament({

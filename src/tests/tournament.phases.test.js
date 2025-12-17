@@ -6,7 +6,7 @@ import {
   addPlayer,
   startTournament,
   closePools
-} from "../tournament.js";
+} from "../tournament.ts";
 
 test("Les poules sont générées au démarrage du tournoi", () => {
   const tournament = createTournament({

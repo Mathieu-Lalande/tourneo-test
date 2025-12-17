@@ -1,7 +1,7 @@
 import test from "node:test";
 import assert from "node:assert";
 
-import { createTournament } from "../tournament.js";
+import { createTournament } from "../tournament.ts";
 
 test("Un tournoi doit avoir un nom", () => {
   assert.throws(
