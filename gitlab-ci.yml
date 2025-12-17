@@ -9,3 +9,7 @@ unit-tests:
     - npm install
     - npm test
     - echo "Unit tests completed."
+  artifacts:
+    reports:
+      junit: tmp/test-results.xml
+    when: always
