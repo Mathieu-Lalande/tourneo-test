@@ -1,4 +1,4 @@
-# Tourneo Test -- Ce fichier est généré par IA
+# Tourneo Test
 
 ## Informations Générales
 
