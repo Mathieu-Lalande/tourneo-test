@@ -20,7 +20,7 @@ export interface Tournament {
   ranking?: Player[];
 }
 
-export function createTournament({ name, teams = [], minPlayers, maxPlayers, withPools = false }: {
+export function createTournament({ name, teams = [], minPlayers = 3, maxPlayers = 16, withPools = false }: {
   name: string;
   teams?: any[];
   minPlayers?: number;
