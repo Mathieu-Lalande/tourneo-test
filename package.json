@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "test": "mkdir -p tmp && node --loader ts-node/esm --test --test-reporter=junit > tmp/test-results.xml"
+    "test": "if not exist tmp mkdir tmp && node --loader ts-node/esm --test --test-reporter=junit > tmp/test-results.xml ",
+    "testcoverage": "node --loader ts-node/esm --test --experimental-test-coverage"
   },
   "devDependencies": {
     "ts-node": "^10.9.2",

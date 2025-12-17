@@ -29,3 +29,5 @@ npm test
 ## Licence
 
 Ce projet est sous licence MIT.
+
+![overage](https://gitlab.com/mathieu.lalande/tourneo-test/badges/main/coverage.svg)

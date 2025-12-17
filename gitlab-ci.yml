@@ -13,3 +13,4 @@ unit-tests:
     reports:
       junit: tmp/test-results.xml
     when: always
+  coverage: '/All files[^|]*\|[^|]*\s+([\d\.]+)%/'
