@@ -15,7 +15,9 @@ export interface Tournament {
   pools?: Player[][];
   poolsFinished: boolean;
   bracket?: Player[];
-  status: "CREATED" | "STARTED";
+  status: "CREATED" | "STARTED" | "FINISHED";
+  subBrackets?: Record<string, Player[]>; // ex: principal, secondaire, perdants, etc.
+  ranking?: Player[];
 }
 
 export function createTournament({ name, teams = [], minPlayers, maxPlayers, withPools = false }: {
@@ -80,9 +82,31 @@ export function startTournament(tournament: Tournament): void {
   }
 }
 
+
+// Génère les sous-tableaux et le classement final
 export function closePools(tournament: Tournament): void {
   if (!tournament.poolsFinished) {
     throw new Error("pools not finished");
   }
-  tournament.bracket = tournament.players.slice();
+  // On crée un bracket principal et secondaire si > 8 joueurs
+  const players = tournament.players.slice();
+  let principal: Player[] = [];
+  let secondaire: Player[] = [];
+  if (players.length > 8) {
+    principal = players.slice(0, 8);
+    secondaire = players.slice(8);
+  } else {
+    principal = players;
+  }
+  tournament.subBrackets = {
+    principal,
+    secondaire
+  };
+  // Simule un classement final basé sur la progression dans les sous-tableaux
+  tournament.ranking = [
+    ...principal,
+    ...secondaire
+  ];
+  tournament.bracket = players;
+  tournament.status = "FINISHED";
 }
